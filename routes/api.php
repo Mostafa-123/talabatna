@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\EmployeeAuthController;
 use App\Http\Controllers\OfficeBoyAuthController;
 use App\Http\Controllers\OfficeboyController;
@@ -32,3 +33,5 @@ Route::get('product/getAllProducts', [ProductController::class, 'getAllProducts'
 Route::get('product/getAllProductsInCategory/{category_id}', [ProductController::class, 'getAllProductsInCategory']);
 
 
+Route::get('category/getcategory/{category_id}', [CategoryController::class, 'getCategory']);
+Route::get('category/getallcategories', [CategoryController::class, 'getAllCategories']);

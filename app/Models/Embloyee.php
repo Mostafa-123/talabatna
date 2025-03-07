@@ -11,6 +11,7 @@ class Embloyee extends User
 {
     use HasFactory,HasApiTokens,Notifiable;
 
+    protected $table='employees';
     protected $guarded = ['id'];
 
     public function getTitle(){

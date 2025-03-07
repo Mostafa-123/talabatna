@@ -18,7 +18,7 @@ return new class extends Migration
             $table->enum('type', ['outdoor', 'indoor'])->default('indoor');
             $table->enum('status', ['delivered', 'indoor'])->default('indoor');
             $table->double('total_price')->default(0);
-            $table->foreign('employee_id')->references('id')->on('embloyees')->onDelete('cascade');
+            $table->foreign('employee_id')->references('id')->on('employees')->onDelete('cascade');
             $table->foreign('officeBoy_id')->references('id')->on('officeboys')->onDelete('cascade');
             $table->timestamps();
         });

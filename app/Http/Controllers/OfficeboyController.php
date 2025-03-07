@@ -45,7 +45,7 @@ class OfficeboyController extends Controller
             'name' => 'required',
             'phone' => 'required|digits:11',
             'email' => 'required|email|unique:officeboys',
-            'password' => 'required|between:4,6',
+            'password' => 'required|between:4,15',
             'status_id' => 'required',
         ]);
 

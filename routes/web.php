@@ -4,7 +4,7 @@ use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DepartmentsController;
-use App\Http\Controllers\EmbloyeesController;
+use App\Http\Controllers\EmployeesController;
 use App\Http\Controllers\OfficeboyController;
 use App\Http\Controllers\OrderStatusController;
 use App\Http\Controllers\ProductController;
@@ -69,12 +69,12 @@ Route::group(['middleware' => ['admin.check']], function () {
     Route::get('admin//order/deletestatus/{id}', [OrderStatusController::class, 'delete'])->name('deleteOrderStatus');
 
 
-    Route::get('admin/embloyee', [EmbloyeesController::class, 'showEmbloyee'])->name('showEmbloyee');
-    Route::get('admin/newembloyee', [EmbloyeesController::class, 'newEmbloyee'])->name('newEmbloyee');
-    Route::post('admin/addembloyee', [EmbloyeesController::class, 'add'])->name('addEmbloyee');
-    Route::get('admin/editemployee/{id}', [EmbloyeesController::class, 'edit'])->name('editEmployee');
-    Route::post('admin/updateemployee/{id}/', [EmbloyeesController::class, 'update'])->name('updateEmployee');
-    Route::get('admin/deleteemployee/{id}/', [EmbloyeesController::class, 'delete'])->name('deleteEmployee');
+    Route::get('admin/embloyee', [EmployeesController::class, 'showEmbloyee'])->name('showEmbloyee');
+    Route::get('admin/newembloyee', [EmployeesController::class, 'newEmbloyee'])->name('newEmbloyee');
+    Route::post('admin/addembloyee', [EmployeesController::class, 'add'])->name('addEmbloyee');
+    Route::get('admin/editemployee/{id}', [EmployeesController::class, 'edit'])->name('editEmployee');
+    Route::post('admin/updateemployee/{id}/', [EmployeesController::class, 'update'])->name('updateEmployee');
+    Route::get('admin/deleteemployee/{id}/', [EmployeesController::class, 'delete'])->name('deleteEmployee');
 
     Route::get('admin/products', [ProductController::class, 'showProducts'])->name('showProducts');
     Route::post('admin/category/products', [ProductController::class, 'showProductsByCategory'])->name('showCategoryProducts');

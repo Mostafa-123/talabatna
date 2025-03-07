@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('embloyees', function (Blueprint $table) {
+        Schema::create('employees', function (Blueprint $table) {
             $table->id();
 
             $table->bigInteger('hr_code');
@@ -27,8 +27,8 @@ return new class extends Migration
 
             $table->timestamps();
 
-            $table->foreign('titlemodel_id')->references('id')->on('titlemodels')->onDelete('cascade');
-            $table->foreign('status_id')->references('id')->on('statuses')->onDelete('cascade');
+            $table->foreign('titlemodel_id')->references('id')->on('title_models')->onDelete('cascade');
+            $table->foreign('status_id')->references('id')->on('user_statuses')->onDelete('cascade');
         });
     }
 
@@ -37,6 +37,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('embloyees');
+        Schema::dropIfExists('employees');
     }
 };
+

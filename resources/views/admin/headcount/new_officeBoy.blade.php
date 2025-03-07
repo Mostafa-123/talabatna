@@ -1,7 +1,7 @@
 @extends('admin.layout')
 
 @section('header')
-    <h3>Add employee</h3>
+    <h3>Add OfficeBoy</h3>
 @endsection
 
 @section('content')

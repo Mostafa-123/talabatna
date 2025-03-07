@@ -8,14 +8,14 @@ use App\Models\UserStatus;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
-class EmbloyeesController extends Controller
+class EmployeesController extends Controller
 {
     public function showEmbloyee()
     {
-        $embloyees = Embloyee::orderBy('id', 'desc')->get();
+        $employees = Embloyee::orderBy('id', 'desc')->get();
 
         $data = [
-            'data' => $embloyees,
+            'data' => $employees,
         ];
 
         return view('admin.headcount.embloyee', $data);
@@ -40,11 +40,11 @@ class EmbloyeesController extends Controller
     public function add(Request $request)
     {
         $request->validate([
-            'hr_code' => 'required|unique:embloyees',
+            'hr_code' => 'required|unique:employees',
             'name' => 'required',
             'phone' => 'required|digits:11',
-            'email' => 'required|email|unique:embloyees',
-            'password' => 'required|between:4,6',
+            'email' => 'required|email|unique:employees',
+            'password' => 'required|between:4,15',
             'floor_number' => 'required|integer|between:1,10',
             'titlemodel_id' => 'required',
             'status_id' => 'required',

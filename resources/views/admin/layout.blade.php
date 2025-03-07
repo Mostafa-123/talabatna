@@ -205,8 +205,6 @@
                                 <!-- End of side menu item -->
 
                                 <!-- Start of side menu item -->
-
-                                <p class="navbar-vertical-label">Requests</p>
                                 <hr class="navbar-vertical-line" />
                                 <!-- parent pages-->
                                 <span class="nav-item-wrapper">
